@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %title= content_for?(:title) ? yield(:title) : "Plan App"
+    %meta{:content => content_for?(:description) ? yield(:description) : "Plan App", :name => "description"}/
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application/lib/require'
+    = csrf_meta_tags
+  %body
+    %header= render 'layouts/navigation'
+    .container
+      .row
+        .col-xs-12
+          -#= render 'layouts/messages'
+          = yield
+          %br
+    #footer.navbar-static-bottom
+      @ Snowpal Software Services

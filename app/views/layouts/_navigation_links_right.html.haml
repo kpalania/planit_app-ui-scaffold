@@ -1,0 +1,11 @@
+%li.dropdown
+  %a#drop1{"data-toggle" => "dropdown", :href => "#", :role => "button"}
+    = current_user.email
+    %span.caret
+  %ul#menu1.dropdown-menu{"aria-labelledby" => "drop1", :role => "menu"}
+    %li.my-dropdown-header{:role => "presentation"}
+      %a{:href => "#{profile}", :role => "menuitem", :tabindex => "-1"} Profile
+      %ul.dropdown-menu.sub-menu{:style => "visibility: hidden"}
+        %li
+    %li.divider
+    %li= link_to "Sign out", destroy_user_session_path, title: current_user.email, :method => :delete

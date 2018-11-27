@@ -1,0 +1,11 @@
+defaults: &defaults
+  api_url: http://localhost:9293
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

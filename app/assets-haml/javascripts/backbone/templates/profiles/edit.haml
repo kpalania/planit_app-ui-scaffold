@@ -1,0 +1,16 @@
+%form#edit-profile{:name => "profile"}
+  .fieldset
+    .form-group
+      %label User Name
+      %input.form-control{:name => 'user_name', :placeholder => "User Name", :type => "text", "value" => "{{profile.user_name}}"}
+    .form-group
+      %label First Name
+      %input.form-control{:name => 'first_name', :placeholder => "First Name", :type => "text", "value" => "{{profile.first_name}}"}
+    .form-group
+      %label Middle Name
+      %input.form-control{:name => 'middle_name', :placeholder => "Middle Name", :type => "text", "value" => "{{profile.middle_name}}"}
+    .form-group
+      %label Last Name
+      %input.form-control{:name => 'last_name', :placeholder => "Last Name", :type => "text", "value" => "{{profile.last_name}}"}
+    %input.btn.btn-primary{:type => "submit", :value => "Update Profile"}
+    %a.btn.btn-primary{:href => "javascript:window.location.hash='#';window.location.reload()"} Cancel
